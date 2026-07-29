@@ -247,12 +247,6 @@ export const Homepage: React.FC<HomepageProps> = ({
       highlight: "Heart-Centered Guidance"
     },
     {
-      quote: "The storyteller style and emphasis on loving Allah has changed our home. My 8-year-old son now reads his daily duas entirely on his own without any reminders.",
-      name: "Suhail A.",
-      role: "Parent of Deeniyat Student",
-      highlight: "Home Transformation"
-    },
-    {
       quote: "The Seerah course was a defining chapter of my life. It brought immense positivity, teaching me the true purpose of living by showing how the Prophet ﷺ faced every hardship with beautiful patience.",
       name: "Sadaf Khurshid",
       role: "Seerah Student",
@@ -281,12 +275,6 @@ export const Homepage: React.FC<HomepageProps> = ({
       name: "Elham Bilal",
       role: "Seerah Course Student",
       highlight: "Character Development"
-    },
-    {
-      quote: "Main aap ka dil se shukriya ada karna chahti hoon. Jab maine apni bachiyon ko Summer Course mein enroll karwaya tha to mera iradah yeh tha ke pehle kuch din dekhun ke bachiyan interest leti hain aur baatein samajh pa rahi hain. Alhamdulillah, Ms. Mustara ka pyaar, shafqat aur bachon ko padhane ka andaaz dekh kar mujhe bohat khushi hui. Bachiyan har class ka besabri se intezar karti hain aur bohat interest ke sath participate karti hain. Sab se zyada khushi mujhe is baat ki hui ke un mein kuch baaton par amal bhi nazar aana shuru ho gaya hai.",
-      name: "Sister Mariam K.",
-      role: "Parent - Summer Course Student",
-      highlight: "Practical Transformation"
     }
   ];
 
