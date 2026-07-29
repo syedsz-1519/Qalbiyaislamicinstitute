@@ -50,7 +50,7 @@ export const Homepage: React.FC<HomepageProps> = ({
     if (isTestimonialsHovered) return;
     const interval = setInterval(() => {
       setActiveTestimonialIndex((prev) => {
-        const nextIndex = (prev + 1) % 4; // testimonies.length = 4
+        const nextIndex = (prev + 1) % testimonies.length;
         if (testimonialScrollRef.current) {
           const firstChild = testimonialScrollRef.current.children[0] as HTMLElement;
           const cardWidth = firstChild ? firstChild.offsetWidth : 380;
@@ -62,10 +62,10 @@ export const Homepage: React.FC<HomepageProps> = ({
         }
         return nextIndex;
       });
-    }, 2500); // 2.5 seconds gap
+    }, 3000); // 3 seconds gap between cards
 
     return () => clearInterval(interval);
-  }, [isTestimonialsHovered]);
+  }, [isTestimonialsHovered, testimonies.length]);
 
   const scrollToTestimonial = (index: number) => {
     setActiveTestimonialIndex(index);
