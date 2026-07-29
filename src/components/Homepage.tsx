@@ -92,7 +92,6 @@ export const Homepage: React.FC<HomepageProps> = ({
       highlight: "Life-Changing Impact"
     }
   ];
-  ];
 
   useEffect(() => {
     if (isTestimonialsHovered) return;
