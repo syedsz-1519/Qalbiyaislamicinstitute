@@ -3,6 +3,11 @@ export interface FAQItem {
   a: string;
 }
 
+export interface CourseAdvantage {
+  title: string;
+  description: string;
+}
+
 export interface Course {
   slug: string;
   category: 'women' | 'kids';
@@ -21,6 +26,7 @@ export interface Course {
   whoThisIsFor: string[];
   faqs: FAQItem[];
   image: string;
+  advantages?: CourseAdvantage[]; // Optional field for 1-on-1 courses
   howLearn?: string; // Optional field for kids' programs
   age?: string; // Optional field for kids' programs
 }

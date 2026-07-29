@@ -81,6 +81,24 @@ export const coursesData: Course[] = [
       '🎓 Course Completion Certificate'
     ],
     outcome: 'By the end of this course, you\'ll recite the Qur\'an fluently, correctly, and with confidence, not guessing, not hesitating, but reciting the way it was meant to be recited.',
+    advantages: [
+      {
+        title: 'Dedicated Time, Just for You',
+        description: 'Class timing built entirely around your schedule'
+      },
+      {
+        title: 'Personalized Correction',
+        description: 'Every mistake, mispronunciation, and question addressed exclusively for you'
+      },
+      {
+        title: 'Your Pace, Your Way',
+        description: 'Move faster or slower, whatever you need'
+      },
+      {
+        title: 'Weekly Progress Tracking',
+        description: 'See exactly how you\'re improving, week by week'
+      }
+    ],
     courseDetails: {
       'Format': '1 on 1 Personalized Session',
       'Platform': 'Google Meet',
@@ -88,7 +106,7 @@ export const coursesData: Course[] = [
       'Classes': '3 classes/week, 1hr each',
       'Fee': 'Rs. 800/month'
     },
-    teacherNote: 'I\'ve seen how much confidence a woman gains once her recitation finally feels right, and how that transforms her relationship with Allah\'s word.',
+    teacherNote: 'I\'ve seen how much confidence a woman gains once her recitation finally feels right — not rushed, not unsure, just correct. That\'s what I want for you in this class: not just knowledge of the rules, but a recitation you feel proud of.',
     whoThisIsFor: [
       'Sisters starting from scratch who want personalized, gentle guidance',
       'Sisters who have been reciting for years but want to refine long standing pronunciation errors',
@@ -96,20 +114,28 @@ export const coursesData: Course[] = [
     ],
     faqs: [
       {
-        q: 'What prior knowledge is required?',
-        a: 'The only requirement is already knowing how to recognize the basic Arabic letters. If you do not, our Noorani Qaida Course is the perfect place to start.'
+        q: 'Do I need any prior Tajweed knowledge?',
+        a: 'No — the only requirement is that you already know how to read the Qur\'an. This course starts from correcting your foundation and builds from there.'
       },
       {
-        q: 'What is the policy for missed classes?',
-        a: 'Since this is a 1 on 1 class, if you notify your teacher at least 4 hours in advance, we will reschedule the class at a mutually convenient time.'
+        q: 'What if I miss a class?',
+        a: 'Since this is a 1-on-1 class (not a group class), scheduling is flexible and built around you. If a specific class is missed, the topic planned for that day is simply covered in the next class — nothing is lost.'
       },
       {
-        q: 'How is the class timing decided?',
-        a: 'Timings are flexible. Upon enrollment, we match you with an instructor whose availability fits your preferred time slots.'
+        q: 'Is this online or in-person?',
+        a: 'Fully online, conducted via Google Meet.'
       },
       {
-        q: 'Is there a trial class available?',
-        a: 'Yes, we offer a free 1 on 1 assessment and trial class so you can experience our teaching method before committing.'
+        q: 'How is the class time decided?',
+        a: 'Class timing is set based on your schedule and availability.'
+      },
+      {
+        q: 'Will I get a certificate?',
+        a: 'Yes — you\'ll receive a certificate upon completing the course.'
+      },
+      {
+        q: 'Is a trial class available?',
+        a: 'Yes — a trial class is available before you commit, so you can experience the teaching style firsthand.'
       }
     ],
     image: cinematicQuranRehal
@@ -339,12 +365,28 @@ export const coursesData: Course[] = [
     ],
     faqs: [
       {
-        q: 'Is this class strictly 1 on 1?',
-        a: 'Yes, our Noorani Qaida for Kids is taught exclusively in a 1 on 1 private format to ensure the instructor can carefully listen to and guide your child\'s exact pronunciation of every single letter.'
+        q: 'What age group is this course for?',
+        a: 'This course is designed for children ages 6 to 12. Class pacing and teaching style are adjusted based on each child\'s individual age and learning speed.'
+      },
+      {
+        q: 'Does my child need any prior knowledge?',
+        a: 'No prior knowledge is needed. This course is specifically designed for complete beginners starting their Qur\'an journey from the very first letter.'
+      },
+      {
+        q: 'How long does the course take?',
+        a: 'Typically 4 to 5 months, though this varies based on your child\'s individual pace. We believe in building a strong, correct foundation rather than rushing through the material.'
       },
       {
         q: 'How long are the classes?',
         a: 'Classes are generally 30 to 45 minutes long, which is the optimal concentration window for children in this age bracket.'
+      },
+      {
+        q: 'Will my child receive a certificate?',
+        a: 'Yes, your child will receive a Noorani Qaida Graduation Certificate upon completing the course, celebrating their achievement and new foundation.'
+      },
+      {
+        q: 'Is this online or in-person?',
+        a: 'This course is fully online, conducted via Google Meet, making it convenient for your family\'s schedule.'
       },
       {
         q: 'How do you handle homework?',

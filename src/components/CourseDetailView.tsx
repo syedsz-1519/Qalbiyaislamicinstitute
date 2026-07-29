@@ -99,6 +99,32 @@ export const CourseDetailView: React.FC<CourseDetailViewProps> = ({
 
       </section>
 
+      {/* SECTION 2 — Why 1:1? Advantages (conditionally rendered) */}
+      {course.advantages && course.advantages.length > 0 && (
+        <section className="space-y-8" id="course-advantages">
+          <div className="border-b border-brand-border pb-3">
+            <h2 className="serif-heading text-2xl font-bold text-text-cream">
+              Why 1:1?
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {course.advantages.map((advantage, idx) => (
+              <div key={idx} className="p-6 rounded-2xl border border-brand-border bg-panel-dark/60 space-y-3 hover:border-accent-gold/40 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center">
+                  <span className="text-2xl text-accent-gold font-bold">{idx + 1}</span>
+                </div>
+                <h3 className="serif-heading text-base font-bold text-text-cream leading-snug">
+                  {advantage.title}
+                </h3>
+                <p className="text-xs text-text-sage leading-relaxed">
+                  {advantage.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Main Breakdown Area */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start" id="course-detail-body">
         
