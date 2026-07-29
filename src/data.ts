@@ -262,7 +262,7 @@ export const coursesData: Course[] = [
       'Fee (Private)': 'Rs. 1,000/month',
       'Fee (Group)': 'Rs. 600/month'
     },
-    teacherNote: 'As someone who has taught children in this age group, I know a class only truly works when a child feels safe, engaged, and loved, not just taught. Every lesson I build is calm, gentle, and genuinely fun, with visuals, games, and quizzes that make learning feel like discovery, not pressure. I teach every child the way I\'d want my own child taught, with patience, warmth, and real care.\nMustara, Founder of Qalbiya Institute',
+    teacherNote: 'As someone who has taught children in this age group, I know a class only truly works when a child feels safe, engaged, and loved, not just taught. Every lesson I build is calm, gentle, and genuinely fun, with visuals, games, and quizzes that make learning feel like discovery, not pressure. I teach every child the way I\'d want my own child taught, with patience, warmth, and real care.\nMs. Mustara, Founder of Qalbiya Institute',
     whoThisIsFor: [
       'For parents who want more than scattered Islamic lessons, who want their child to build one complete, lasting foundation in Deen, taught with structure and care.'
     ],

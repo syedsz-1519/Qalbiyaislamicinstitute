@@ -263,6 +263,30 @@ export const Homepage: React.FC<HomepageProps> = ({
       name: "Raukaia Khatoon",
       role: "Seerah Student",
       highlight: "Practical Implementation"
+    },
+    {
+      quote: "MashaAllah♥️, your Seerah lecture was truly moving. The way you brought the life of our beloved Prophet ﷺ to life with those incidents of sabr, akhlaq, and mercy made it feel so real and relatable. It reminded me to embody his character in daily life. May Allah accept your effort, make it a source of guidance for all of us. JazakAllahu khair❤️",
+      name: "Sister Fatima R.",
+      role: "Seerah Course Student",
+      highlight: "Transformative Teaching"
+    },
+    {
+      quote: "For me the Seerah course is amazing because of two-way communication. Whenever we weren't sure about something or didn't understand, Ms. Mustara repeated the lecture with different examples. I want to mention one positive change - I am reciting more salawat on the Prophet ﷺ now.",
+      name: "Sister Amira S.",
+      role: "Seerah Course Student",
+      highlight: "Interactive Learning"
+    },
+    {
+      quote: "Ms. Mustara's Seerah course has been a beautiful learning experience for me. I understand the lessons clearly because of her excellent teaching. I can already see positive changes in my life as I try to follow what I learn. Thank you for your dedication, kindness, and for inspiring us to become better Muslims. May Allah reward you abundantly. Ameen.🩷",
+      name: "Sister Hana K.",
+      role: "Seerah Course Student",
+      highlight: "Character Development"
+    },
+    {
+      quote: "Main aap ka dil se shukriya ada karna chahti hoon. Jab maine apni bachiyon ko Summer Course mein enroll karwaya tha to mera iradah yeh tha ke pehle kuch din dekhun ke bachiyan interest leti hain aur baatein samajh pa rahi hain. Alhamdulillah, Ms. Mustara ka pyaar, shafqat aur bachon ko padhane ka andaaz dekh kar mujhe bohat khushi hui. Bachiyan har class ka besabri se intezar karti hain aur bohat interest ke sath participate karti hain. Sab se zyada khushi mujhe is baat ki hui ke un mein kuch baaton par amal bhi nazar aana shuru ho gaya hai.",
+      name: "Sister Mariam K.",
+      role: "Parent - Summer Course Student",
+      highlight: "Practical Transformation"
     }
   ];
 
@@ -726,7 +750,7 @@ export const Homepage: React.FC<HomepageProps> = ({
             {testimonies.map((item, index) => (
               <div 
                 key={index}
-                className={`snap-start shrink-0 w-[88vw] sm:w-[460px] bg-white rounded-3xl border transition-all duration-300 p-6 sm:p-8 space-y-6 flex flex-col justify-between shadow-xs hover:shadow-xl ${
+                className={`snap-start shrink-0 w-[88vw] sm:w-[460px] min-h-[420px] bg-white rounded-3xl border transition-all duration-300 p-6 sm:p-8 space-y-6 flex flex-col justify-between shadow-xs hover:shadow-xl ${
                   activeTestimonialIndex === index ? 'border-[#78122B] ring-2 ring-[#78122B]/10' : 'border-[#E8DDD9]'
                 }`}
               >
