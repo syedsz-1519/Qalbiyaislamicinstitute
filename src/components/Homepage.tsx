@@ -674,7 +674,7 @@ export const Homepage: React.FC<HomepageProps> = ({
             <CourseCard
               key={course.slug}
               course={course}
-              onSelectCourse={onSelectCourse}
+              onSelect={onSelectCourse}
             />
           ))}
         </div>

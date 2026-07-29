@@ -343,10 +343,8 @@ export const ProgramsHub: React.FC<ProgramsHubProps> = ({
             </button>
           </div>
         ) : (
-          /* Cards Grid: 2x2 for Women's, 2-col for Kids' */
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${
-            !isKids && displayedCourses.length > 2 ? 'lg:grid-cols-2' : ''
-          }`}>
+          /* Cards Grid: Responsive 2-column layout for all */
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full min-h-[400px]">
             {displayedCourses.map((course) => {
               return (
                 <div 
