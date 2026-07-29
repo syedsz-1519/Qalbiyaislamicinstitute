@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { RotateCcw, Volume2, VolumeX, X, CheckCircle2, Heart, Info, Flame, Award, Instagram } from 'lucide-react';
+import { RotateCcw, Volume2, VolumeX, X, CheckCircle2, Heart, Info, Flame, Award } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 
 const playSoftChime = (pitch: number = 587.33) => {
   try {

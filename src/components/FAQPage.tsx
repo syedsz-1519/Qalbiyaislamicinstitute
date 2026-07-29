@@ -4,7 +4,6 @@ import {
   HelpCircle, 
   ChevronDown, 
   MessageSquare, 
-  Instagram, 
   Search,
   X,
   Plus,
@@ -14,6 +13,7 @@ import {
   DollarSign,
   GraduationCap
 } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 import { Route } from '../types';
 import { ShareButton } from './ShareButton';
 

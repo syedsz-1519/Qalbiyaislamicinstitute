@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, Instagram, Clock, Sparkles, Send, CheckCircle2, AlertCircle, Mail, ExternalLink, HelpCircle, ChevronDown } from 'lucide-react';
+import { MessageSquare, Clock, Sparkles, Send, CheckCircle2, AlertCircle, Mail, ExternalLink, HelpCircle, ChevronDown } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 
 export const ContactPage: React.FC = () => {
   const [name, setName] = useState('');

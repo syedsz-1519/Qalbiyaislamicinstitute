@@ -9,9 +9,9 @@ import {
   RefreshCw, 
   AlertTriangle, 
   Scale, 
-  MessageSquare, 
-  Instagram 
+  MessageSquare
 } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 import { Route } from '../types';
 
 interface TermsAndConditionsPageProps {

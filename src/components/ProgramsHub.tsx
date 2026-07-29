@@ -1,6 +1,7 @@
 import React, { useRef, useState, useMemo, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Heart, BookOpen, MessageCircle, Instagram, ArrowRight, Quote, SlidersHorizontal, Check, X, Search, Users, User, Clock, RotateCcw, HelpCircle, ChevronRight, GraduationCap } from 'lucide-react';
+import { Heart, BookOpen, MessageCircle, ArrowRight, Quote, SlidersHorizontal, Check, X, Search, Users, User, Clock, RotateCcw, HelpCircle, ChevronRight, GraduationCap } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 import { Course, Route } from '../types';
 import { ShareButton } from './ShareButton';
 

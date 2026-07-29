@@ -1,5 +1,6 @@
 import React from 'react';
-import { Instagram, Compass, Heart, Sparkles, MessageCircle } from 'lucide-react';
+import { Compass, Heart, Sparkles, MessageCircle } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 import { Route } from '../types';
 import qalbiyaLogoImg from '../assets/images/logo.jpeg';
 

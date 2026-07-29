@@ -1,5 +1,6 @@
 import React from 'react';
-import { ShieldCheck, Calendar, ArrowRight, MessageSquare, Instagram } from 'lucide-react';
+import { ShieldCheck, Calendar, ArrowRight, MessageSquare } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 
 export const RefundPolicyPage: React.FC = () => {
   return (

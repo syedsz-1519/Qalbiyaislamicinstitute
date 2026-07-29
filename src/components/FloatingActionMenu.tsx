@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Plus, X, Instagram, BookOpen, Sparkles, MessageCircle } from 'lucide-react';
+import { Plus, X, BookOpen, Sparkles, MessageCircle } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 
 interface FloatingActionMenuProps {
   onDhikrClick: () => void;

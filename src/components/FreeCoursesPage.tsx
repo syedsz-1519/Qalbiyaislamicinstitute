@@ -1,5 +1,6 @@
 import React from 'react';
-import { Calendar, Video, Heart, Sparkles, Send, Instagram, BookOpen, Gift } from 'lucide-react';
+import { Calendar, Video, Heart, Sparkles, Send, BookOpen, Gift } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 import { Route } from '../types';
 import { ShareButton } from './ShareButton';
 

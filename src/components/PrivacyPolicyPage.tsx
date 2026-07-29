@@ -5,9 +5,9 @@ import {
   MessageSquare, 
   Share2, 
   Heart, 
-  Mail, 
-  Instagram 
+  Mail
 } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 
 export const PrivacyPolicyPage: React.FC = () => {
   return (
