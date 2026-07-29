@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   Heart, BookOpen, GraduationCap, Users, Shield, ArrowRight, Star, 
   Check, MessageCircle, Sparkles, Quote, HelpCircle, ChevronDown, 
-  Compass, Lightbulb, Sun, Award, Globe, Phone, Mail, Instagram,
+  Compass, Lightbulb, Sun, Award, Globe, Phone, Mail,
   ChevronRight, ChevronLeft, Send, CheckCircle2, AlertCircle, ExternalLink
 } from 'lucide-react';
+import { Instagram } from './InstagramIcon';
 import { Course, Route } from '../types';
 import { CourseCard } from './CourseCard';
 import makkahBackground from '../assets/images/makkah_background_1784048674395.jpg';
@@ -49,28 +50,40 @@ export const Homepage: React.FC<HomepageProps> = ({
   // Testimonies array - MUST be before useEffect that uses it
   const testimonies = [
     {
-      quote: "Ms. Mustara created a space so warm and gentle that I actually looked forward to making mistakes because of how lovingly she guided me to fix them. My recitation has completely changed.",
-      name: "Sister Aisha M.",
-      role: "Tajweed 1 on 1 Student",
-      highlight: "Heart-Centered Guidance"
+      quote: "In the beginning, I knew nothing at all but everything I've learned today is because of Mustara Ma'am's hard work, guidance, and duas. She didn't just teach us she taught us to love the Qur'an, understand our deen, and act upon it. Every word, every piece of advice from her touches the heart. JazakAllah Khayr for being such a noor in our journey of ilm.",
+      name: "Neha Khan",
+      role: "Noorani Qaida Student",
+      highlight: "Transformative Teaching"
     },
     {
-      quote: "The Seerah course was a defining chapter of my life. It brought immense positivity, teaching me the true purpose of living by showing how the Prophet ﷺ faced every hardship with beautiful patience.",
-      name: "Sister Fatima H.",
-      role: "Seerah Course Graduate",
-      highlight: "Transformative Learning"
+      quote: "I really enjoyed this course and understood everything very well. Mustara Ma'am's way of explaining was excellent and I understood everything clearly. Through this course I also learned the correct way to read the Qur'an and the proper pronunciation of each word.",
+      name: "Ahlam Khurshid",
+      role: "Noorani Qaida Student",
+      highlight: "Clear Explanations"
     },
     {
-      quote: "My daughter used to be shy about her deen, but now she recites with confidence and genuinely loves her Islamic learning sessions. Ms. Mustara has a gift with children.",
-      name: "Br. Ahmed K.",
-      role: "Parent of Tarbiyah Student",
-      highlight: "Kids Love It"
+      quote: "Alhamdulillah, Mustara Ma'am explained every topic so clearly and it was so easy to understand. It didn't feel like online learning at all, everything was so visual and clear. May Allah grant her more success.",
+      name: "Shafaq Khurshid",
+      role: "Tajweed 1on1 Student",
+      highlight: "Visual & Engaging"
     },
     {
-      quote: "I was intimidated by classical Arabic, but the way the fundamentals were presented made everything click. I can now confidently understand Quranic text.",
-      name: "Sister Layla J.",
-      role: "Arabic Fundamentals Student",
-      highlight: "Confidence Building"
+      quote: "1on1 Tajweed Course with Mustara Ma'am was excellent. She explained everything so clearly and in such an easy way, and no praise is enough for how well she teaches. Her voice is beautiful too, and her teaching style made everything easy to understand and learn.",
+      name: "Areesha Ibrahim",
+      role: "Tajweed 1on1 Student",
+      highlight: "Professional Excellence"
+    },
+    {
+      quote: "The Surah Al-Mulk Tadabbur course with Mustara Ma'am changed the way I read the Qur'an. Every ayah felt personal, not just something to study she helped us truly reflect and connect it to our own lives. It has changed how I see my problems and how I trust Allah and even in small moments, these reflections come back to calm my heart. JazakAllah Khair for teaching in a way that truly stays with me.",
+      name: "Tazmeen Fatima",
+      role: "Surah Al-Mulk Tadabbur Student",
+      highlight: "Deep Reflection"
+    },
+    {
+      quote: "I sincerely thank Mustara Ma'am for her dedication during the 40-day Islamic Summer Camp. Enrolling my two daughters (aged 9 and 7) was one of the best decisions I made. I've seen beautiful changes in them, as they've not only learned Islamic values but started practicing them daily. Because of this experience, I've decided to enroll them in the Juniors Deeniyat Master Course Islamic Studies course as well. May Allah reward Mustara Ma'am abundantly and bless her for guiding our children.",
+      name: "Hani Mustafa",
+      role: "Parent - Islamic Summer Camp",
+      highlight: "Life-Changing Impact"
     }
   ];
 
