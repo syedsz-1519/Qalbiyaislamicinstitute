@@ -266,19 +266,19 @@ export const Homepage: React.FC<HomepageProps> = ({
     },
     {
       quote: "MashaAllah♥️, your Seerah lecture was truly moving. The way you brought the life of our beloved Prophet ﷺ to life with those incidents of sabr, akhlaq, and mercy made it feel so real and relatable. It reminded me to embody his character in daily life. May Allah accept your effort, make it a source of guidance for all of us. JazakAllahu khair❤️",
-      name: "Sister Fatima R.",
+      name: "Rihana Khan",
       role: "Seerah Course Student",
       highlight: "Transformative Teaching"
     },
     {
       quote: "For me the Seerah course is amazing because of two-way communication. Whenever we weren't sure about something or didn't understand, Ms. Mustara repeated the lecture with different examples. I want to mention one positive change - I am reciting more salawat on the Prophet ﷺ now.",
-      name: "Sister Amira S.",
+      name: "Nagma Jaffer",
       role: "Seerah Course Student",
       highlight: "Interactive Learning"
     },
     {
       quote: "Ms. Mustara's Seerah course has been a beautiful learning experience for me. I understand the lessons clearly because of her excellent teaching. I can already see positive changes in my life as I try to follow what I learn. Thank you for your dedication, kindness, and for inspiring us to become better Muslims. May Allah reward you abundantly. Ameen.🩷",
-      name: "Sister Hana K.",
+      name: "Elham Bilal",
       role: "Seerah Course Student",
       highlight: "Character Development"
     },
