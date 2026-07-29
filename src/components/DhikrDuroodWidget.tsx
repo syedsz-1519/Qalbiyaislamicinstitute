@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { RotateCcw, Volume2, VolumeX, X, CheckCircle2, Heart, Info, Flame, Award } from 'lucide-react';
-import { Instagram } from './InstagramIcon';
 
 const playSoftChime = (pitch: number = 587.33) => {
   try {
@@ -48,7 +47,6 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
   const [hoveredDhikr, setHoveredDhikr] = useState(false);
   const [hoveredDurood, setHoveredDurood] = useState(false);
   const [hoveredWa, setHoveredWa] = useState(false);
-  const [hoveredInsta, setHoveredInsta] = useState(false);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [dhikrCounts, setDhikrCounts] = useState<{ [key: string]: number }>({
     subhanallah: 0, alhamdulillah: 0, allahuakbar: 0, astaghfirullah: 0, lailahaillallah: 0,
@@ -136,15 +134,6 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
             <span className="absolute inset-0 rounded-full bg-[#125A3A] opacity-30 animate-pulse group-hover:scale-110 transition-all" />
             <span className="text-base sm:text-lg relative z-10 leading-none">✨</span>
           </motion.button>
-        </div>
-
-        <div className="relative flex items-center justify-center">
-          <AnimatePresence>
-            {hoveredInsta && <motion.div initial={{ opacity: 0, x: 10, scale: 0.9 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 10, scale: 0.9 }} className="hidden sm:block absolute right-full mr-3 bg-slate-900/95 text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg shadow-xl backdrop-blur-md border border-white/20 whitespace-nowrap pointer-events-none">Instagram</motion.div>}
-          </AnimatePresence>
-          <motion.a href="https://instagram.com/qalbiya_institute" target="_blank" rel="noopener noreferrer" onMouseEnter={() => setHoveredInsta(true)} onMouseLeave={() => setHoveredInsta(false)} whileHover={{ scale: 1.12, translateX: -2 }} whileTap={{ scale: 0.88 }} className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white border border-white/20 shadow-md transition-all relative group cursor-pointer">
-            <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-white relative z-10" />
-          </motion.a>
         </div>
 
         <div className="relative flex items-center justify-center">
