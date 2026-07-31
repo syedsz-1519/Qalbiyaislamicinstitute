@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, currentRoute }) => {
             </p>
 
             <div className="space-y-3 pt-2">
-              <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#F3D797]">Connect With Us</h4>
+              <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#F3D797]">Follow & Contact</h4>
               <div className="flex flex-col space-y-2.5 text-sm text-white/90">
                 <a 
                   href="https://instagram.com/qalbiya_institute" 
@@ -53,15 +53,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, currentRoute }) => {
                   id="footer-link-instagram"
                 >
                   <Instagram className="w-4 h-4 text-[#F3D797] shrink-0" />
-                  <span className="underline decoration-white/30 hover:decoration-current">@qalbiya.institute (Instagram)</span>
+                  <span className="underline decoration-white/30 hover:decoration-current">@qalbiya_institute</span>
                 </a>
                 <a 
-                  href="mailto:qalbiya.institute@gmail.com" 
+                  href="mailto:qalbiyaislamicinstitute@gmail.com" 
                   className="flex items-center space-x-2.5 text-white/90 hover:text-[#F3D797] transition-colors duration-300 font-semibold"
                   id="footer-link-email"
                 >
                   <span className="w-4 h-4 text-[#F3D797] shrink-0 flex items-center justify-center">✉</span>
-                  <span className="underline decoration-white/30 hover:decoration-current">qalbiya.institute@gmail.com</span>
+                  <span className="underline decoration-white/30 hover:decoration-current">qalbiyaislamicinstitute@gmail.com</span>
                 </a>
               </div>
             </div>
@@ -174,7 +174,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, currentRoute }) => {
           {/* Interactive Block: WhatsApp Contact Buttons */}
           <div className="md:col-span-4 space-y-4">
             <div className="space-y-3">
-              <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#F3D797]">Connect With Us</h4>
+              <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#F3D797]">Get Support</h4>
               <p className="text-xs text-white/90">Reach out directly via WhatsApp for questions or guidance.</p>
               
               <div className="flex flex-col gap-3">
