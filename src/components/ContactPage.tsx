@@ -506,9 +506,9 @@ export const ContactPage: React.FC = () => {
                     For administrative or academic inquiries, send us an email anytime.
                   </p>
                   <div className="pt-2 border-t border-[#E8DDD9] flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-[#23181A]">qalbiya.institute@gmail.com</span>
+                    <span className="font-mono text-xs font-bold text-[#23181A]">qalbiyaislamicinstitute@gmail.com</span>
                     <a 
-                      href="mailto:qalbiya.institute@gmail.com"
+                      href="mailto:qalbiyaislamicinstitute@gmail.com"
                       className="text-xs font-semibold text-[#78122B] hover:underline flex items-center gap-1"
                     >
                       Send Email →
