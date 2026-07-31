@@ -115,33 +115,114 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
 
   return (
     <>
-      <div className="fixed bottom-5 right-5 z-50 flex flex-col items-center gap-2.5 p-1.5 rounded-full bg-[#1B1214]/90 border border-[#D4AF37]/40 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md select-none">
+      {/* Combined Dhikr & Durood Button - Centered on right side */}
+      <div className="fixed bottom-1/2 right-5 z-50 translate-y-1/2 flex flex-col items-center gap-3">
+        {/* Combined Spiritual Counter Button */}
         <div className="relative flex items-center justify-center">
           <AnimatePresence>
-            {hoveredDhikr && <motion.div initial={{ opacity: 0, x: 10, scale: 0.9 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 10, scale: 0.9 }} className="hidden sm:block absolute right-full mr-3 bg-[#1B1214] text-[#F3D797] text-[11px] font-semibold px-2.5 py-1 rounded-lg shadow-xl backdrop-blur-md border border-[#D4AF37]/40 whitespace-nowrap pointer-events-none">1-Min Dhikr</motion.div>}
+            {(hoveredDhikr || hoveredDurood) && (
+              <motion.div 
+                initial={{ opacity: 0, x: 10, scale: 0.9 }} 
+                animate={{ opacity: 1, x: 0, scale: 1 }} 
+                exit={{ opacity: 0, x: 10, scale: 0.9 }} 
+                className="hidden sm:block absolute right-full mr-3 bg-[#1B1214] text-[#F3D797] text-[11px] font-semibold px-3 py-2 rounded-lg shadow-xl backdrop-blur-md border border-[#D4AF37]/40 whitespace-nowrap pointer-events-none"
+              >
+                <div className="text-center">
+                  <div>Dhikr: {totalDhikrCount}/{totalDhikrTarget}</div>
+                  <div>Durood: {duroodCount}</div>
+                </div>
+              </motion.div>
+            )}
           </AnimatePresence>
-          <motion.button onClick={() => setActiveModal('dhikr')} onMouseEnter={() => setHoveredDhikr(true)} onMouseLeave={() => setHoveredDhikr(false)} whileHover={{ scale: 1.12, translateX: -2 }} whileTap={{ scale: 0.88 }} className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-[#78122B] text-[#F3D797] border border-[#D4AF37]/70 shadow-md transition-all relative group cursor-pointer">
-            <span className="absolute inset-0 rounded-full bg-[#78122B] opacity-30 animate-pulse group-hover:scale-110 transition-all" />
-            <span className="text-base sm:text-lg relative z-10 leading-none">📿</span>
-            <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2 z-20"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F3D797] opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]" /></span>
+          
+          {/* Main spiritual button that opens menu */}
+          <motion.button 
+            onClick={() => setActiveModal(activeModal ? null : 'dhikr')} 
+            onMouseEnter={() => setHoveredDhikr(true)} 
+            onMouseLeave={() => setHoveredDhikr(false)} 
+            whileHover={{ scale: 1.12 }} 
+            whileTap={{ scale: 0.88 }} 
+            className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#78122B] to-[#540B1D] text-[#F3D797] border-2 border-[#D4AF37]/70 shadow-xl transition-all relative group cursor-pointer"
+          >
+            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#78122B]/30 to-[#540B1D]/30 animate-pulse group-hover:scale-110 transition-all" />
+            <span className="text-2xl sm:text-3xl relative z-10 leading-none">🤲</span>
+            
+            {/* Combined counter badge */}
+            {(totalDhikrCount > 0 || duroodCount > 0) && (
+              <span className="absolute -top-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-[#D4AF37] text-[#1B1214] text-[9px] font-bold z-20 border-2 border-[#F3D797]">
+                {totalDhikrCount + duroodCount > 99 ? '99+' : totalDhikrCount + duroodCount}
+              </span>
+            )}
+            
+            {/* Pulse indicator when active */}
+            <span className="absolute -top-1 -left-1 flex h-3 w-3 z-20">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F3D797] opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#D4AF37]" />
+            </span>
           </motion.button>
-        </div>
-        <div className="relative flex items-center justify-center">
+          
+          {/* Expandable menu when button is clicked */}
           <AnimatePresence>
-            {hoveredDurood && <motion.div initial={{ opacity: 0, x: 10, scale: 0.9 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 10, scale: 0.9 }} className="hidden sm:block absolute right-full mr-3 bg-[#082819] text-[#F3D797] text-[11px] font-semibold px-2.5 py-1 rounded-lg shadow-xl backdrop-blur-md border border-[#D4AF37]/40 whitespace-nowrap pointer-events-none">Durood Shareef</motion.div>}
+            {activeModal && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, x: 20 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.8, x: 20 }}
+                className="absolute right-full mr-4 flex flex-col gap-2"
+              >
+                {/* Dhikr Option */}
+                <motion.button
+                  onClick={() => setActiveModal('dhikr')}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#78122B] text-[#F3D797] border border-[#D4AF37]/50 shadow-lg hover:bg-[#630E23] transition-all text-xs font-semibold whitespace-nowrap"
+                >
+                  <span className="text-sm">📿</span>
+                  <span>Dhikr ({totalDhikrCount})</span>
+                </motion.button>
+                
+                {/* Durood Option */}
+                <motion.button
+                  onClick={() => setActiveModal('durood')}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#0B3C26] text-[#F3D797] border border-[#D4AF37]/50 shadow-lg hover:bg-[#125A3A] transition-all text-xs font-semibold whitespace-nowrap"
+                >
+                  <span className="text-sm">✨</span>
+                  <span>Durood ({duroodCount})</span>
+                </motion.button>
+              </motion.div>
+            )}
           </AnimatePresence>
-          <motion.button onClick={() => setActiveModal('durood')} onMouseEnter={() => setHoveredDurood(true)} onMouseLeave={() => setHoveredDurood(false)} whileHover={{ scale: 1.12, translateX: -2 }} whileTap={{ scale: 0.88 }} className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-[#0B3C26] text-[#F3D797] border border-[#D4AF37]/70 shadow-md transition-all relative group cursor-pointer">
-            <span className="absolute inset-0 rounded-full bg-[#125A3A] opacity-30 animate-pulse group-hover:scale-110 transition-all" />
-            <span className="text-base sm:text-lg relative z-10 leading-none">✨</span>
-          </motion.button>
         </div>
+      </div>
 
+      {/* WhatsApp Button - Separate position at bottom right */}
+      <div className="fixed bottom-5 right-5 z-50">
         <div className="relative flex items-center justify-center">
           <AnimatePresence>
-            {hoveredWa && <motion.div initial={{ opacity: 0, x: 10, scale: 0.9 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 10, scale: 0.9 }} className="hidden sm:block absolute right-full mr-3 bg-slate-900/95 text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg shadow-xl backdrop-blur-md border border-white/20 whitespace-nowrap pointer-events-none">WhatsApp</motion.div>}
+            {hoveredWa && (
+              <motion.div 
+                initial={{ opacity: 0, x: 10, scale: 0.9 }} 
+                animate={{ opacity: 1, x: 0, scale: 1 }} 
+                exit={{ opacity: 0, x: 10, scale: 0.9 }} 
+                className="hidden sm:block absolute right-full mr-3 bg-slate-900/95 text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg shadow-xl backdrop-blur-md border border-white/20 whitespace-nowrap pointer-events-none"
+              >
+                WhatsApp Support
+              </motion.div>
+            )}
           </AnimatePresence>
-          <motion.a href="https://wa.me/918145363290?text=Assalamu%20Alaikum%2C%20I%20have%20an%20inquiry%20about%20Qalbiya%20Islamic%20Institute." target="_blank" rel="noopener noreferrer" onMouseEnter={() => setHoveredWa(true)} onMouseLeave={() => setHoveredWa(false)} whileHover={{ scale: 1.12, translateX: -2 }} whileTap={{ scale: 0.88 }} className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white border border-white/20 shadow-md transition-all relative group cursor-pointer">
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current text-white relative z-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.053 1.048 12.006 1.048c-5.448 0-9.876 4.373-9.88 9.802-.002 1.81.481 3.578 1.393 5.113L2.533 21.67l5.114-1.316zm10.743-7.142c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" /></svg>
+          <motion.a 
+            href="https://wa.me/918145363290?text=Assalamu%20Alaikum%2C%20I%20have%20an%20inquiry%20about%20Qalbiya%20Islamic%20Institute." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            onMouseEnter={() => setHoveredWa(true)} 
+            onMouseLeave={() => setHoveredWa(false)} 
+            whileHover={{ scale: 1.12 }} 
+            whileTap={{ scale: 0.88 }} 
+            className="flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white border-2 border-white/20 shadow-lg transition-all relative group cursor-pointer"
+          >
+            <span className="text-lg sm:text-xl relative z-10 leading-none">💬</span>
           </motion.a>
         </div>
       </div>
