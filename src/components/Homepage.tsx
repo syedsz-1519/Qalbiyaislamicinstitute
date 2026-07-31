@@ -433,25 +433,28 @@ export const Homepage: React.FC<HomepageProps> = ({
             transition={{ duration: 0.8 }}
             className="space-y-4 pt-4"
           >
-            <h1 className="serif-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#23181A] leading-[1.12] tracking-tight">
-              Knowledge That Reaches the Heart. <br className="hidden sm:inline" />
-              <span className="text-[#78122B] italic">Amal That Changes the Life.</span>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[#23181A] leading-[1.15] tracking-normal">
+              <span className="block">Knowledge That Reaches the Heart.</span>
+              <span className="block text-[#78122B] font-normal italic mt-2">Amal That Changes the Life.</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-[#5C4D50] max-w-2xl mx-auto font-medium leading-relaxed">
-              Structured, compassionate, and authentic online Islamic learning tailored for <span className="font-bold text-[#78122B]">Women</span> and <span className="font-bold text-[#2E6B38]">Children</span> worldwide.
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5C4D50] max-w-3xl mx-auto font-normal leading-[1.6] tracking-wide">
+              Structured, compassionate, and authentic online Islamic learning tailored for <span className="font-semibold text-[#78122B]">Women</span> and <span className="font-semibold text-[#2E6B38]">Children</span> worldwide.
             </p>
 
             {/* Direct Subject Highlights Tag Bar (Tajweed, Seerah, Quran Books) */}
-            <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs sm:text-sm font-semibold text-[#5C4D50]">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-[#E8DDD9] text-[#78122B] shadow-2xs">
-                <BookOpen className="w-3.5 h-3.5" /> Tajweed & Qur'an Recitation
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-6 text-sm font-medium text-[#5C4D50]">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-[#E8DDD9] text-[#78122B] shadow-sm hover:shadow-md transition-all">
+                <BookOpen className="w-4 h-4" /> 
+                <span>Tajweed & Qur'an Recitation</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-[#E8DDD9] text-[#2E6B38] shadow-2xs">
-                <Heart className="w-3.5 h-3.5" /> Seerah of Prophet ﷺ
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-[#E8DDD9] text-[#2E6B38] shadow-sm hover:shadow-md transition-all">
+                <Heart className="w-4 h-4" /> 
+                <span>Seerah of Prophet ﷺ</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-[#E8DDD9] text-[#A37B24] shadow-2xs">
-                <GraduationCap className="w-3.5 h-3.5" /> Classical Deeniyat & Books
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-[#E8DDD9] text-[#A37B24] shadow-sm hover:shadow-md transition-all">
+                <GraduationCap className="w-4 h-4" /> 
+                <span>Classical Deeniyat & Books</span>
               </span>
             </div>
           </motion.div>
@@ -491,18 +494,18 @@ export const Homepage: React.FC<HomepageProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="pt-6 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs sm:text-sm font-semibold text-[#5C4D50]"
+            className="pt-8 flex flex-wrap items-center justify-center gap-y-3 gap-x-8 text-sm font-medium text-[#5C4D50]"
           >
-            <div className="flex items-center gap-1.5">
-              <Check className="w-4 h-4 text-[#78122B]" />
-              <span>Live 1 on 1, Small Group Classes</span>
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5 text-[#78122B]" />
+              <span>Live 1-on-1 & Small Group Classes</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <Check className="w-4 h-4 text-[#78122B]" />
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5 text-[#78122B]" />
               <span>Female Qualified Teachers</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <Check className="w-4 h-4 text-[#78122B]" />
+            <div className="flex items-center gap-2">
+              <Check className="w-5 h-5 text-[#78122B]" />
               <span>Flexible Global Timings</span>
             </div>
           </motion.div>
