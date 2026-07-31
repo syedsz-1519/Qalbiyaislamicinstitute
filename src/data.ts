@@ -2,6 +2,14 @@ import { Course } from './types';
 import cinematicQuranRehal from './assets/images/cinematic_quran_rehal_1785071840478.jpg';
 import cinematicWomenStudy from './assets/images/cinematic_women_study_1785071864678.jpg';
 import cinematicKidsTarbiyah from './assets/images/cinematic_kids_tarbiyah_1785071899107.jpg';
+import onlineLearningSetup from './assets/images/online_learning_setup_1784025332504.jpg';
+import heroLearningSetup from './assets/images/hero_learning_setup_1784226560154.jpg';
+import onlineLearningTablet from './assets/images/online_learning_tablet_1784039716228.jpg';
+import quranRehalWindow from './assets/images/quran_rehal_arched_window_1784016809949.jpg';
+import sacredLearningApproach from './assets/images/sacred_learning_approach_1784016791330.jpg';
+import womensOnlineStudy from './assets/images/womens_online_study_1784048690815.jpg';
+import tabletOnlineClass from './assets/images/tablet_online_class_1784047721074.jpg';
+import kidsOnlineStudy from './assets/images/kids_online_study_1784048706942.jpg';
 
 export const coursesData: Course[] = [
   {
@@ -55,7 +63,7 @@ export const coursesData: Course[] = [
         a: 'Class timings are shared upon registration, with multiple batches designed to fit different schedules.'
       }
     ],
-    image: cinematicWomenStudy
+    image: womensOnlineStudy
   },
   {
     slug: 'tajweed1on1',
@@ -138,7 +146,7 @@ export const coursesData: Course[] = [
         a: 'Yes — a trial class is available before you commit, so you can experience the teaching style firsthand.'
       }
     ],
-    image: cinematicQuranRehal
+    image: onlineLearningTablet
   },
   {
     slug: 'nooraniQaida',
@@ -191,7 +199,7 @@ export const coursesData: Course[] = [
         a: 'Yes, daily short practice homework is assigned. There is a gentle final oral and written review to ensure your fundamentals are perfectly set.'
       }
     ],
-    image: cinematicWomenStudy
+    image: sacredLearningApproach
   },
   {
     slug: 'preDiplomaDeeniyat',
@@ -247,7 +255,7 @@ export const coursesData: Course[] = [
         a: 'Yes, we conduct a gentle written and oral assessment at the end of the 6 months to celebrate your growth and award your Pre Diploma.'
       }
     ],
-    image: cinematicWomenStudy
+    image: heroLearningSetup
   },
   {
     slug: 'juniorsDeeniyatMastercourse',
@@ -393,6 +401,6 @@ export const coursesData: Course[] = [
         a: 'Homework is gentle and highly visual (e.g. practicing a single line or playing a digital matching game). We aim to make it something they look forward to rather than a chore.'
       }
     ],
-    image: cinematicKidsTarbiyah
+    image: tabletOnlineClass
   }
 ];

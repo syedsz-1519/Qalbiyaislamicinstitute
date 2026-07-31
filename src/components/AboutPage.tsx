@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, Heart, Sparkles } from 'lucide-react';
-import founderWorkspace from '../assets/images/founder_workspace_1784048720294.jpg';
 import { ShareButton } from './ShareButton';
 
 interface AboutPageProps {
@@ -42,32 +41,17 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* SECTION 3 — Founder Story */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start pt-4">
-        {/* Founder Image Column */}
-        <div className="lg:col-span-5 space-y-4">
-          <div className="relative rounded-3xl overflow-hidden border border-[#E8DDD9] bg-[#FAF8F5] shadow-xl group">
-            <img
-              src={founderWorkspace}
-              alt="Ms. Mustara, Founder of Qalbiya Islamic Institute"
-              referrerPolicy="no-referrer"
-              className="w-full aspect-[4/5] object-cover filter brightness-[0.97] contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/80 via-[#23181A]/20 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
-              <span className="text-[11px] font-bold text-[#F3D797] uppercase tracking-widest block">Founder & Lead Mentor</span>
-              <p className="text-xl font-serif font-bold tracking-tight">Ms. Mustara</p>
-              <p className="text-xs text-white/80 font-medium">Qalbiya Islamic Institute</p>
-            </div>
-          </div>
-          <div className="p-4 rounded-2xl bg-[#F9E8EC]/60 border border-[#E8DDD9] text-center">
-            <p className="text-xs font-serif italic text-[#78122B]">
+      <section className="pt-4">
+        {/* Story Text - Full Width */}
+        <div className="space-y-5 text-sm sm:text-base leading-relaxed text-[#5C4D50] max-w-4xl mx-auto">
+          
+          {/* Founder Quote Card */}
+          <div className="p-6 rounded-3xl bg-[#F9E8EC]/60 border border-[#E8DDD9] text-center mb-8">
+            <p className="text-base font-serif italic text-[#78122B] font-medium">
               "If ilm never reaches our character and daily life, what was the point?"
             </p>
+            <p className="text-xs text-[#5C4D50] mt-2 font-semibold">- Ms. Mustara, Founder</p>
           </div>
-        </div>
-
-        {/* Story Text Column */}
-        <div className="lg:col-span-7 space-y-5 text-sm sm:text-base leading-relaxed text-[#5C4D50] max-w-prose">
           <span className="text-xs font-bold uppercase tracking-widest text-[#78122B] block">Founder's Journey</span>
           <h2 className="serif-heading text-2xl sm:text-3xl font-bold text-[#23181A]">
             The Story Behind the Heart
