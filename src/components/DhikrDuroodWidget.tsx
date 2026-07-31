@@ -115,8 +115,8 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
 
   return (
     <>
-      {/* Combined Dhikr & Durood Button - Centered on right side */}
-      <div className="fixed bottom-1/2 right-5 z-50 translate-y-1/2 flex flex-col items-center gap-3">
+      {/* Combined Dhikr & Durood Button - Above WhatsApp button */}
+      <div className="fixed bottom-20 right-5 z-50 flex flex-col items-center gap-3">
         {/* Combined Spiritual Counter Button */}
         <div className="relative flex items-center justify-center">
           <AnimatePresence>
@@ -145,7 +145,7 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
             className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#78122B] to-[#540B1D] text-[#F3D797] border-2 border-[#D4AF37]/70 shadow-xl transition-all relative group cursor-pointer"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#78122B]/30 to-[#540B1D]/30 animate-pulse group-hover:scale-110 transition-all" />
-            <span className="text-2xl sm:text-3xl relative z-10 leading-none">🤲</span>
+            <span className="text-2xl sm:text-3xl relative z-10 leading-none">✨</span>
             
             {/* Combined counter badge */}
             {(totalDhikrCount > 0 || duroodCount > 0) && (
@@ -197,7 +197,7 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
         </div>
       </div>
 
-      {/* WhatsApp Button - Separate position at bottom right */}
+      {/* WhatsApp Button - Bottom right */}
       <div className="fixed bottom-5 right-5 z-50">
         <div className="relative flex items-center justify-center">
           <AnimatePresence>
