@@ -82,10 +82,10 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, select
               />
             </div>
             <div className="flex flex-col">
-              <h1 className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-[#78122B] group-hover:text-[#630E23] transition-colors leading-tight">
+              <h1 className="font-logo text-lg sm:text-2xl font-bold tracking-wide text-[#78122B] group-hover:text-[#630E23] transition-colors leading-tight uppercase">
                 Qalbiya
               </h1>
-              <span className="text-[9px] sm:text-[10px] font-mono font-bold tracking-widest text-[#5C4D50] uppercase">
+              <span className="text-[9px] sm:text-[10px] font-logo font-medium tracking-widest text-[#5C4D50] uppercase">
                 Islamic Institute
               </span>
             </div>
@@ -398,8 +398,8 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate, select
                     <img src={qalbiyaLogoImg} alt="Qalbiya Logo" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col">
-                    <h2 className="font-serif text-base sm:text-lg font-bold text-[#78122B] leading-tight">Qalbiya</h2>
-                    <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-[#5C4D50]">Islamic Institute</span>
+                    <h2 className="font-logo text-base sm:text-lg font-bold text-[#78122B] leading-tight uppercase">Qalbiya</h2>
+                    <span className="text-[9px] sm:text-[10px] font-logo font-medium uppercase tracking-widest text-[#5C4D50]">Islamic Institute</span>
                   </div>
                 </div>
                 <button
