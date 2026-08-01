@@ -345,18 +345,18 @@ export const Homepage: React.FC<HomepageProps> = ({
     <div className="min-h-screen bg-[#FAF8F5] text-[#23181A] transition-colors duration-300 pb-16">
       
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Animated Background Canvas & Image Layer */}
+      <section className="relative min-h-[95vh] flex items-center justify-center pt-20 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Professional Background Layer with Enhanced Transparency */}
         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          {/* Enhanced Animated Background Image Layer (Ken Burns Effect) */}
+          {/* Subtle Animated Background Image Layer */}
           <motion.div 
             className="absolute inset-0 w-full h-full"
             animate={{
-              scale: [1, 1.08, 1],
-              opacity: [0.85, 0.95, 0.85],
+              scale: [1, 1.05, 1],
+              opacity: [0.15, 0.25, 0.15],
             }}
             transition={{
-              duration: 25,
+              duration: 30,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -365,156 +365,147 @@ export const Homepage: React.FC<HomepageProps> = ({
               src={heroQuranSeerahBooks} 
               alt="Open Holy Quran on rehal stand surrounded by Tajweed, Seerah, and classical Islamic study books" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.08] saturate-[1.1] sepia-[0.05] hue-rotate-[5deg]"
+              className="w-full h-full object-cover filter brightness-[1.1] contrast-[0.85] saturate-[0.8] opacity-80"
               style={{ 
-                filter: 'contrast(1.08) saturate(1.1) brightness(0.95) sepia(0.05) hue-rotate(5deg)',
+                filter: 'contrast(0.85) saturate(0.8) brightness(1.1)',
                 imageRendering: 'high-quality'
               }}
               loading="eager"
               decoding="sync"
             />
             
-            {/* Additional image enhancement overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/5 via-transparent to-[#F3D797]/5 mix-blend-overlay" />
+            {/* Professional overlay with subtle warmth */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/3 via-transparent to-[#F3D797]/3 mix-blend-soft-light" />
           </motion.div>
 
-          {/* Soft Tint Overlay for Perfect Contrast & Legibility while keeping image clearly visible */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/50 via-[#FAF8F5]/30 to-[#FAF8F5]" />
-          <div className="absolute inset-0 bg-white/35 backdrop-blur-[1px]" />
+          {/* Enhanced Professional Overlay for Maximum Readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/85 via-[#FAF8F5]/75 to-[#FAF8F5]/90" />
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-[0.5px]" />
 
-          {/* Animated Gradient Blob 1 - Top Left Burgundy Glow */}
+          {/* Subtle Professional Accent Elements */}
           <motion.div
-            className="absolute -top-20 -left-20 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-[#78122B]/20 via-[#78122B]/10 to-transparent blur-3xl"
+            className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gradient-to-br from-[#78122B]/8 via-[#78122B]/4 to-transparent blur-3xl"
             animate={{
-              x: [0, 40, -20, 0],
-              y: [0, 30, -10, 0],
-              scale: [1, 1.25, 1.1, 1],
-              opacity: [0.5, 0.8, 0.6, 0.5],
+              x: [0, 20, -10, 0],
+              y: [0, 15, -5, 0],
+              scale: [1, 1.1, 1.05, 1],
+              opacity: [0.2, 0.4, 0.3, 0.2],
             }}
             transition={{
-              duration: 12,
+              duration: 18,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           />
 
-          {/* Animated Gradient Blob 2 - Bottom Right Golden Warm Glow */}
           <motion.div
-            className="absolute -bottom-20 -right-20 w-80 h-80 sm:w-[28rem] sm:h-[28rem] rounded-full bg-gradient-to-tl from-[#D4AF37]/20 via-[#F3D797]/15 to-transparent blur-3xl"
+            className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-tl from-[#D4AF37]/8 via-[#F3D797]/6 to-transparent blur-3xl"
             animate={{
-              x: [0, -50, 20, 0],
-              y: [0, -40, 10, 0],
-              scale: [1, 1.3, 0.95, 1],
-              opacity: [0.4, 0.75, 0.5, 0.4],
+              x: [0, -25, 10, 0],
+              y: [0, -20, 5, 0],
+              scale: [1, 1.15, 0.98, 1],
+              opacity: [0.15, 0.35, 0.2, 0.15],
             }}
             transition={{
-              duration: 15,
+              duration: 22,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           />
 
-          {/* Animated Gradient Blob 3 - Subtle Soft Gold Center Aura */}
-          <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] rounded-full bg-gradient-to-r from-[#F3D797]/15 to-[#78122B]/10 blur-3xl pointer-events-none"
-            animate={{
-              scale: [0.9, 1.15, 0.9],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-
-          {/* Subtle Grid Accent Pattern Overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(#78122B_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04]" />
+          {/* Clean Professional Grid Pattern */}
+          <div className="absolute inset-0 bg-[radial-gradient(#78122B_0.5px,transparent_0.5px)] [background-size:40px_40px] opacity-[0.02]" />
         </div>
 
-        {/* Hero Content Container */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+        {/* Hero Content Container - Enhanced Professional Layout */}
+        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
 
-          {/* Main Title & Headline */}
+          {/* Professional Title & Headline with Better Typography */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-4 pt-4"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="space-y-6 pt-6"
           >
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[#23181A] leading-[1.15] tracking-normal">
-              <span className="block">Knowledge That Reaches the Heart.</span>
-              <span className="block text-[#78122B] font-normal italic mt-2">Amal That Changes the Life.</span>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#23181A] leading-[1.1] tracking-tight">
+              <span className="block font-medium">Knowledge That Reaches the Heart.</span>
+              <span className="block text-[#78122B] font-light italic mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Amal That Changes the Life.</span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-[#5C4D50] max-w-3xl mx-auto font-normal leading-[1.6] tracking-wide">
-              Structured, compassionate, and authentic online Islamic learning tailored for <span className="font-semibold text-[#78122B]">Women</span> and <span className="font-semibold text-[#2E6B38]">Children</span> worldwide.
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5C4D50] max-w-4xl mx-auto font-light leading-[1.5] tracking-wide mt-8">
+              Structured, compassionate, and authentic online Islamic learning tailored for <span className="font-medium text-[#78122B] border-b border-[#78122B]/20">Women</span> and <span className="font-medium text-[#2E6B38] border-b border-[#2E6B38]/20">Children</span> worldwide.
             </p>
 
-            {/* Direct Subject Highlights Tag Bar (Tajweed, Seerah, Quran Books) */}
-            <div className="flex flex-wrap items-center justify-center gap-3 pt-6 text-sm font-medium text-[#5C4D50]">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-[#E8DDD9] text-[#78122B] shadow-sm hover:shadow-md transition-all">
+            {/* Refined Subject Highlights with Professional Styling */}
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-8 text-sm">
+              <span className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-sm border border-[#E8DDD9]/60 text-[#78122B] shadow-sm hover:shadow-lg hover:bg-white transition-all duration-300">
                 <BookOpen className="w-4 h-4" /> 
-                <span>Tajweed & Qur'an Recitation</span>
+                <span className="font-medium">Tajweed & Qur'an Recitation</span>
               </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-[#E8DDD9] text-[#2E6B38] shadow-sm hover:shadow-md transition-all">
+              <span className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-sm border border-[#E8DDD9]/60 text-[#2E6B38] shadow-sm hover:shadow-lg hover:bg-white transition-all duration-300">
                 <Heart className="w-4 h-4" /> 
-                <span>Seerah of Prophet ﷺ</span>
+                <span className="font-medium">Seerah of Prophet ﷺ</span>
               </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-[#E8DDD9] text-[#A37B24] shadow-sm hover:shadow-md transition-all">
+              <span className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-sm border border-[#E8DDD9]/60 text-[#A37B24] shadow-sm hover:shadow-lg hover:bg-white transition-all duration-300">
                 <GraduationCap className="w-4 h-4" /> 
-                <span>Classical Deeniyat & Books</span>
+                <span className="font-medium">Classical Deeniyat Studies</span>
               </span>
             </div>
           </motion.div>
 
-          {/* User-Friendly & Authentic CTA Buttons */}
+          {/* Professional CTA Buttons with Enhanced Styling */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-3"
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-6"
           >
-            {/* Women's Hub CTA */}
+            {/* Women's Hub CTA - Premium Design */}
             <button
               onClick={() => onNavigate('women')}
-              className="w-full sm:w-auto max-w-xs sm:max-w-none min-w-[220px] sm:min-w-[250px] px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-[#78122B] hover:bg-[#630E23] text-white font-bold text-sm sm:text-base transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 cursor-pointer flex items-center justify-center gap-2.5 sm:gap-3 group active:scale-98"
+              className="w-full sm:w-auto max-w-xs sm:max-w-none min-w-[260px] sm:min-w-[280px] px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-[#78122B] to-[#630E23] hover:from-[#630E23] hover:to-[#540B1D] text-white font-semibold text-base sm:text-lg transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 cursor-pointer flex items-center justify-center gap-3 group active:scale-95 backdrop-blur-sm border border-[#78122B]/20"
               id="hero-btn-women-hub"
             >
-              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3D797]" />
+              <Users className="w-5 h-5 text-[#F3D797]" />
               <span>Explore Women's Classes</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
             </button>
 
-            {/* Kids' Hub CTA */}
+            {/* Kids' Hub CTA - Premium Design */}
             <button
               onClick={() => onNavigate('kids')}
-              className="w-full sm:w-auto max-w-xs sm:max-w-none min-w-[220px] sm:min-w-[250px] px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-[#2E6B38] hover:bg-[#25572e] text-white font-bold text-sm sm:text-base transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 cursor-pointer flex items-center justify-center gap-2.5 sm:gap-3 group active:scale-98"
+              className="w-full sm:w-auto max-w-xs sm:max-w-none min-w-[260px] sm:min-w-[280px] px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-[#2E6B38] to-[#25572e] hover:from-[#25572e] hover:to-[#1f4a26] text-white font-semibold text-base sm:text-lg transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 cursor-pointer flex items-center justify-center gap-3 group active:scale-95 backdrop-blur-sm border border-[#2E6B38]/20"
               id="hero-btn-kids-hub"
             >
-              <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3D797]" />
+              <GraduationCap className="w-5 h-5 text-[#F3D797]" />
               <span>Explore Kids' Tarbiyah</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
             </button>
           </motion.div>
 
-          {/* Trust Highlights Strip */}
+          {/* Professional Trust Indicators */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="pt-8 flex flex-wrap items-center justify-center gap-y-3 gap-x-8 text-sm font-medium text-[#5C4D50]"
+            transition={{ duration: 1.2, delay: 0.6 }}
+            className="pt-12 flex flex-wrap items-center justify-center gap-y-4 gap-x-10 text-sm font-medium text-[#5C4D50]"
           >
-            <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-[#78122B]" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[#78122B]/10 flex items-center justify-center">
+                <Check className="w-4 h-4 text-[#78122B]" />
+              </div>
               <span>Live 1-on-1 & Small Group Classes</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-[#78122B]" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[#78122B]/10 flex items-center justify-center">
+                <Check className="w-4 h-4 text-[#78122B]" />
+              </div>
               <span>Female Qualified Teachers</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-[#78122B]" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[#78122B]/10 flex items-center justify-center">
+                <Check className="w-4 h-4 text-[#78122B]" />
+              </div>
               <span>Flexible Global Timings</span>
             </div>
           </motion.div>
