@@ -348,15 +348,15 @@ export const Homepage: React.FC<HomepageProps> = ({
       <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Animated Background Canvas & Image Layer */}
         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          {/* Animated Background Image Layer (Ken Burns Effect) */}
+          {/* Enhanced Animated Background Image Layer (Ken Burns Effect) */}
           <motion.div 
             className="absolute inset-0 w-full h-full"
             animate={{
-              scale: [1, 1.06, 1],
-              opacity: [0.80, 0.95, 0.80],
+              scale: [1, 1.08, 1],
+              opacity: [0.85, 0.95, 0.85],
             }}
             transition={{
-              duration: 20,
+              duration: 25,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -365,8 +365,17 @@ export const Homepage: React.FC<HomepageProps> = ({
               src={heroQuranSeerahBooks} 
               alt="Open Holy Quran on rehal stand surrounded by Tajweed, Seerah, and classical Islamic study books" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover filter brightness-[0.92] contrast-[1.05]"
+              className="w-full h-full object-cover filter brightness-[0.95] contrast-[1.08] saturate-[1.1] sepia-[0.05] hue-rotate-[5deg]"
+              style={{ 
+                filter: 'contrast(1.08) saturate(1.1) brightness(0.95) sepia(0.05) hue-rotate(5deg)',
+                imageRendering: 'high-quality'
+              }}
+              loading="eager"
+              decoding="sync"
             />
+            
+            {/* Additional image enhancement overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/5 via-transparent to-[#F3D797]/5 mix-blend-overlay" />
           </motion.div>
 
           {/* Soft Tint Overlay for Perfect Contrast & Legibility while keeping image clearly visible */}
@@ -535,11 +544,20 @@ export const Homepage: React.FC<HomepageProps> = ({
                 src={cinematicWomenStudy} 
                 alt="Women's Programs" 
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105 group-hover:saturate-110 filter contrast-105 saturate-105 brightness-102"
+                style={{ 
+                  filter: 'contrast(1.05) saturate(1.05) brightness(1.02)',
+                  imageRendering: 'high-quality'
+                }}
+                loading="lazy"
+                decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/60 via-[#23181A]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/60 via-[#23181A]/20 to-transparent group-hover:from-[#78122B]/40 group-hover:via-[#78122B]/10 transition-all duration-500" />
               
-              <span className="absolute top-4 left-4 rounded-full bg-[#78122B] text-white px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider shadow-xs">
+              {/* Enhanced overlay with warm tones */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/0 to-[#F3D797]/0 group-hover:from-[#78122B]/10 group-hover:to-[#F3D797]/5 transition-all duration-500 mix-blend-overlay" />
+              
+              <span className="absolute top-4 left-4 rounded-full bg-[#78122B] text-white px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider shadow-lg backdrop-blur-sm border border-white/20">
                 For Women
               </span>
             </div>
@@ -588,11 +606,20 @@ export const Homepage: React.FC<HomepageProps> = ({
                 src={cinematicKidsTarbiyah} 
                 alt="Kids' Programs" 
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105 group-hover:saturate-110 filter contrast-105 saturate-105 brightness-102"
+                style={{ 
+                  filter: 'contrast(1.05) saturate(1.05) brightness(1.02)',
+                  imageRendering: 'high-quality'
+                }}
+                loading="lazy"
+                decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/60 via-[#23181A]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/60 via-[#23181A]/20 to-transparent group-hover:from-[#2E6B38]/40 group-hover:via-[#2E6B38]/10 transition-all duration-500" />
               
-              <span className="absolute top-4 left-4 rounded-full bg-[#2E6B38] text-white px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider shadow-xs">
+              {/* Enhanced overlay with nature tones */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#2E6B38]/0 to-[#4F9A5A]/0 group-hover:from-[#2E6B38]/10 group-hover:to-[#4F9A5A]/5 transition-all duration-500 mix-blend-overlay" />
+              
+              <span className="absolute top-4 left-4 rounded-full bg-[#2E6B38] text-white px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider shadow-lg backdrop-blur-sm border border-white/20">
                 For Kids (Ages 6 to 12)
               </span>
             </div>

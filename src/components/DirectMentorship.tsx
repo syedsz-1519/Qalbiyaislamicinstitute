@@ -39,18 +39,28 @@ export const DirectMentorship: React.FC = () => {
                 }}
               />
               
-              {/* Portrait Frame */}
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 aspect-square rounded-2xl overflow-hidden border-2 border-[#E8DDD9] shadow-md bg-white z-10">
+              {/* Enhanced Portrait Frame */}
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 aspect-square rounded-2xl overflow-hidden border-2 border-[#E8DDD9] shadow-lg bg-gradient-to-br from-[#FAF8F5] to-[#F3D797]/20 z-10">
                 <img
                   src={founderWorkspace}
                   alt="Ms. Mustara, Founder & Head Mentor of Qalbiya Islamic Institute"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover filter brightness-95 transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover filter brightness-100 contrast-105 saturate-105 transition-all duration-700 hover:scale-105 hover:brightness-105"
+                  style={{ 
+                    filter: 'contrast(1.05) saturate(1.05) brightness(1)',
+                    imageRendering: 'high-quality'
+                  }}
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/80 via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#23181A]/85 via-[#23181A]/20 to-transparent opacity-90" />
+                
+                {/* Enhanced warm overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/5 to-[#F3D797]/5 mix-blend-overlay" />
+                
                 <div className="absolute bottom-3 left-3 right-3 text-center">
-                  <span className="text-xs font-bold text-white uppercase tracking-widest block">Ms. Mustara</span>
-                  <span className="text-[10px] text-[#F3D797] font-semibold block mt-0.5">Founder & Head Mentor</span>
+                  <span className="text-xs font-bold text-white uppercase tracking-widest block drop-shadow-md">Ms. Mustara</span>
+                  <span className="text-[10px] text-[#F3D797] font-semibold block mt-0.5 drop-shadow-sm">Founder & Head Mentor</span>
                 </div>
               </div>
 

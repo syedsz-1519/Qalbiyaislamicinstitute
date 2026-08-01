@@ -19,12 +19,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, currentRoute }) => {
           {/* Logo & Vision Block */}
           <div className="md:col-span-4 space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#F3D797]/40 bg-[#FAF8F5] shadow-xs shrink-0">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#F3D797]/40 bg-gradient-to-br from-[#FAF8F5] to-[#F3D797]/20 shadow-lg shrink-0 ring-2 ring-white/10">
                 <img 
                   src={qalbiyaLogoImg} 
                   alt="Qalbiya Islamic Institute Emblem" 
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover filter brightness-105 contrast-105"
+                  style={{ 
+                    filter: 'contrast(1.05) brightness(1.05)',
+                    imageRendering: 'high-quality'
+                  }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>

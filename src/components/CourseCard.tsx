@@ -68,10 +68,10 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
       id={`course-card-${course.slug}`}
     >
       {/* Course Thumbnail Image */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border-b border-[#E8DDD9]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-[#FAF8F5] to-[#F3D797]/20 border-b border-[#E8DDD9]">
         {course.badge && (
           <div 
-            className="absolute top-3 left-3 z-10 rounded-full bg-[#78122B] px-3 py-1 text-[11px] font-extrabold tracking-wider text-white uppercase shadow-xs border border-[#78122B]"
+            className="absolute top-3 left-3 z-10 rounded-full bg-[#78122B] px-3 py-1 text-[11px] font-extrabold tracking-wider text-white uppercase shadow-lg border border-[#78122B] backdrop-blur-sm"
             id={`course-badge-${course.slug}`}
           >
             {course.badge}
@@ -79,8 +79,8 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
         )}
 
         {/* Online Presence Indicator Overlay */}
-        <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 rounded-full bg-slate-900/85 px-2.5 py-1 text-white border border-white/20 backdrop-blur-sm shadow-xs">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+        <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 rounded-full bg-slate-900/85 px-2.5 py-1 text-white border border-white/20 backdrop-blur-sm shadow-lg">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-sm" />
           <span className="text-[9px] font-extrabold uppercase tracking-widest text-[#F9E8EC]">Live Online</span>
         </div>
         
@@ -88,10 +88,19 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
           src={course.image}
           alt={course.title}
           referrerPolicy="no-referrer"
-          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-105 group-hover:saturate-110 filter brightness-100 contrast-105"
+          style={{ 
+            filter: 'contrast(1.05) saturate(1.1) brightness(1.02)',
+            imageRendering: 'high-quality'
+          }}
           id={`course-img-${course.slug}`}
+          loading="lazy"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+        
+        {/* Enhanced hover overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/0 via-transparent to-[#78122B]/0 group-hover:from-[#78122B]/10 group-hover:to-[#630E23]/5 transition-all duration-500" />
       </div>
 
       {/* Content Area */}
