@@ -90,6 +90,36 @@ export const Homepage: React.FC<HomepageProps> = ({
       name: "Hani Mustafa",
       role: "Parent - Islamic Summer Camp",
       highlight: "Life-Changing Impact"
+    },
+    {
+      quote: "I would definitely recommend this Seerah course by Qalbiya Islamic Institute to others, because it has changed the way I see life. The peace and positive change I've felt through this course make me want others to learn the same and improve their lives too.",
+      name: "Raukaia Khatoon",
+      role: "Seerah Student",
+      highlight: "Life-Changing Peace"
+    },
+    {
+      quote: "The Seerah course was an important turning point in my life, bringing so many positive changes and teaching me the true purpose of life. I'm deeply thankful to Mustara Ma'am for this life-changing course learning about the Prophet SAW's patience through every hardship truly strengthened my connection with Allah. JazakAllah Khairan Kaseera to Mustara Ma'am for building this institute and for all her hard work.",
+      name: "Sadaf Khurshid",
+      role: "Seerah Student (Batch 2)",
+      highlight: "Turning Point"
+    },
+    {
+      quote: "Mustara Ma'am's Seerah Course has been a beautiful learning experience for me. I understand every lesson clearly because of her excellent teaching. I can already see positive changes in my life as I try to follow what I've learned. I'm truly thankful for her dedication, kindness, and for inspiring us to become better Muslims. May Allah reward her abundantly ameen.",
+      name: "Elham Bilal",
+      role: "Seerah Student (Batch 3)",
+      highlight: "Beautiful Learning"
+    },
+    {
+      quote: "MashaAllah, Mustara Ma'am's Seerah lecture was truly moving. The way she brought the life of our beloved Prophet SAW to life with those incidents of sabr, akhlaq, and mercy made it feel so real and relatable. It reminded me to embody his character in daily life. May Allah accept your effort, make it a source of guidance for all of us. JazakAllahu khair.",
+      name: "Rihana Khan",
+      role: "Seerah Student (Batch 3)",
+      highlight: "Truly Moving"
+    },
+    {
+      quote: "For me, the Seerah course was amazing because of the two-way communication. Mustara Ma'am always checked whether we understood the lesson or not and repeated it many times with different examples whenever needed. One positive change I've noticed in myself is that I now recite more salawat on the Prophet (peace be upon him).",
+      name: "Nagma Jaffer",
+      role: "Seerah Student (Batch 3)",
+      highlight: "Interactive Teaching"
     }
   ];
 
