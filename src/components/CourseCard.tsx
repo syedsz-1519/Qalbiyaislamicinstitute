@@ -13,9 +13,22 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if device is mobile/tablet for optimized interactions
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    // Disable 3D effects on mobile for better performance and battery life
+    if (isMobile || !cardRef.current) return;
+    
     const card = cardRef.current;
     const rect = card.getBoundingClientRect();
     const width = rect.width;
@@ -25,22 +38,35 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
     const mouseX = e.clientX - rect.left - width / 2;
     const mouseY = e.clientY - rect.top - height / 2;
 
-    // Calculate rotation angles (max 6 degrees tilt for ultra-smooth subtle premium feel)
-    const rY = (mouseX / (width / 2)) * 6;
-    const rX = -(mouseY / (height / 2)) * 6;
+    // Reduced tilt for smoother performance (4deg instead of 6deg)
+    const rY = (mouseX / (width / 2)) * 4;
+    const rX = -(mouseY / (height / 2)) * 4;
 
     setRotateX(rX);
     setRotateY(rY);
   };
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    if (!isMobile) setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
-    setRotateX(0);
-    setRotateY(0);
+    if (!isMobile) {
+      setIsHovered(false);
+      setRotateX(0);
+      setRotateY(0);
+    }
+  };
+
+  // Touch handlers for mobile smooth interactions
+  const handleTouchStart = () => {
+    if (isMobile) setIsHovered(true);
+  };
+
+  const handleTouchEnd = () => {
+    if (isMobile) {
+      setTimeout(() => setIsHovered(false), 200);
+    }
   };
 
   return (
@@ -49,22 +75,24 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       animate={{
-        rotateX: isHovered ? rotateX : 0,
-        rotateY: isHovered ? rotateY : 0,
-        scale: isHovered ? 1.025 : 1,
+        rotateX: isHovered && !isMobile ? rotateX : 0,
+        rotateY: isHovered && !isMobile ? rotateY : 0,
+        scale: isHovered ? (isMobile ? 1.02 : 1.025) : 1,
       }}
       transition={{
         type: "spring",
-        stiffness: 400,
-        damping: 25,
+        stiffness: isMobile ? 300 : 400,
+        damping: isMobile ? 30 : 25,
         mass: 0.4,
       }}
       style={{
-        transformStyle: "preserve-3d",
-        perspective: 1200,
+        transformStyle: isMobile ? "flat" : "preserve-3d",
+        perspective: isMobile ? "none" : 1200,
       }}
-      className="group flex flex-col h-full rounded-2xl border border-[#E8DDD9] bg-white overflow-hidden shadow-sm transition-all duration-300 hover:border-[#78122B] hover:shadow-xl"
+      className="group flex flex-col h-full rounded-2xl border border-[#E8DDD9] bg-white overflow-hidden shadow-sm transition-all duration-300 hover:border-[#78122B] hover:shadow-xl touch-manipulation"
       id={`course-card-${course.slug}`}
     >
       {/* Course Thumbnail Image */}
@@ -138,26 +166,28 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
           </div>
         </div>
 
-        {/* CTA Actions */}
-        <div className="mt-auto pt-2 flex items-center justify-between">
-          <button
+        {/* Enhanced CTA Actions for Mobile & Desktop */}
+        <div className="mt-auto pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
+          <motion.button
             onClick={() => onSelect(course.slug)}
-            className="inline-flex items-center space-x-1.5 text-xs font-semibold uppercase tracking-wider text-[#78122B] hover:text-[#630E23] group/btn transition-colors duration-300 min-h-[44px] md:min-h-0 py-2.5 md:py-1 cursor-pointer"
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center space-x-1.5 text-xs font-semibold uppercase tracking-wider text-[#78122B] hover:text-[#630E23] group/btn transition-colors duration-300 min-h-[44px] sm:min-h-0 py-3 sm:py-1 px-4 sm:px-0 rounded-xl sm:rounded-none bg-[#78122B]/5 sm:bg-transparent hover:bg-[#78122B]/10 sm:hover:bg-transparent cursor-pointer"
             id={`course-card-details-btn-${course.slug}`}
           >
             <span>Read Sacred Overview</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
-          </button>
+          </motion.button>
 
-          <a
+          <motion.a
             href={`https://wa.me/918145363290?text=Assalamu%20Alaikum%20Ms.%20Mustara%2C%20I%20am%20sincerely%20interested%20in%20registering%20for%20the%20${encodeURIComponent(course.title)}.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 md:h-9 items-center justify-center rounded-xl bg-[#78122B] hover:bg-[#630E23] border border-[#78122B] px-3.5 text-xs font-semibold text-white transition-all duration-300 hover:shadow-xs"
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex h-12 sm:h-9 items-center justify-center rounded-xl bg-[#78122B] hover:bg-[#630E23] active:bg-[#540B1D] border border-[#78122B] px-4 sm:px-3.5 text-xs font-semibold text-white transition-all duration-300 hover:shadow-lg active:shadow-sm cursor-pointer touch-manipulation"
             id={`course-card-wa-btn-${course.slug}`}
           >
-            Enroll Now
-          </a>
+            <span>Enroll Now</span>
+          </motion.a>
         </div>
       </div>
     </motion.div>

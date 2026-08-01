@@ -115,8 +115,8 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
 
   return (
     <>
-      {/* Combined Dhikr & Durood Button - Above WhatsApp button */}
-      <div className="fixed bottom-20 right-5 z-50 flex flex-col items-center gap-3">
+      {/* Combined Dhikr & Durood Button - Enhanced for Mobile */}
+      <div className="fixed bottom-20 right-3 sm:right-5 z-50 flex flex-col items-center gap-3">
         {/* Combined Spiritual Counter Button */}
         <div className="relative flex items-center justify-center">
           <AnimatePresence>
@@ -135,14 +135,14 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
             )}
           </AnimatePresence>
           
-          {/* Main spiritual button that opens menu */}
+          {/* Main spiritual button with enhanced mobile support */}
           <motion.button 
             onClick={() => setActiveModal(activeModal ? null : 'dhikr')} 
             onMouseEnter={() => setHoveredDhikr(true)} 
             onMouseLeave={() => setHoveredDhikr(false)} 
             whileHover={{ scale: 1.12 }} 
             whileTap={{ scale: 0.88 }} 
-            className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#78122B] to-[#540B1D] text-[#F3D797] border-2 border-[#D4AF37]/70 shadow-xl transition-all relative group cursor-pointer"
+            className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#78122B] to-[#540B1D] text-[#F3D797] border-2 border-[#D4AF37]/70 shadow-xl transition-all relative group cursor-pointer touch-manipulation"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#78122B]/30 to-[#540B1D]/30 animate-pulse group-hover:scale-110 transition-all" />
             <span className="text-xl sm:text-2xl relative z-10 leading-none">✨</span>
@@ -197,8 +197,8 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
         </div>
       </div>
 
-      {/* WhatsApp Button - Bottom right */}
-      <div className="fixed bottom-5 right-5 z-50">
+      {/* WhatsApp Button - Enhanced for Mobile */}
+      <div className="fixed bottom-3 sm:bottom-5 right-3 sm:right-5 z-50">
         <div className="relative flex items-center justify-center">
           <AnimatePresence>
             {hoveredWa && (
@@ -220,7 +220,7 @@ export const DhikrDuroodWidget: React.FC<{ activeModal: 'dhikr' | 'durood' | nul
             onMouseLeave={() => setHoveredWa(false)} 
             whileHover={{ scale: 1.12 }} 
             whileTap={{ scale: 0.88 }} 
-            className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white border-2 border-white/20 shadow-xl transition-all relative group cursor-pointer"
+            className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white border-2 border-white/20 shadow-xl transition-all relative group cursor-pointer touch-manipulation"
           >
             <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current text-white relative z-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.053 1.048 12.006 1.048c-5.448 0-9.876 4.373-9.88 9.802-.002 1.81.481 3.578 1.393 5.113L2.533 21.67l5.114-1.316zm10.743-7.142c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
