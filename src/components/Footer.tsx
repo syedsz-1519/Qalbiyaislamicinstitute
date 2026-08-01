@@ -174,7 +174,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, currentRoute }) => {
           {/* Interactive Block: WhatsApp Contact Buttons */}
           <div className="md:col-span-4 space-y-4">
             <div className="space-y-3">
-              <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#F3D797]">Connect With Us</h4>
+              <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#F3D797]">Chat With Us</h4>
               <p className="text-xs text-white/90">Reach out directly via WhatsApp for questions or guidance.</p>
               
               <div className="flex flex-col gap-3">
