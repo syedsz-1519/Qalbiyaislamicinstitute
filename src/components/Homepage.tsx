@@ -427,13 +427,13 @@ export const Homepage: React.FC<HomepageProps> = ({
             transition={{ duration: 1, ease: "easeOut" }}
             className="space-y-6 pt-6"
           >
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#23181A] leading-[1.1] tracking-tight">
-              <span className="block font-medium">Knowledge That Reaches the Heart.</span>
-              <span className="block text-[#78122B] font-light italic mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Amal That Changes the Life.</span>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[#23181A] leading-[1.1] tracking-tight">
+              <span className="block font-semibold">Knowledge That Reaches the Heart.</span>
+              <span className="block text-[#78122B] font-normal italic mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Amal That Changes the Life.</span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-[#5C4D50] max-w-4xl mx-auto font-light leading-[1.5] tracking-wide mt-8">
-              Structured, compassionate, and authentic online Islamic learning tailored for <span className="font-medium text-[#78122B] border-b border-[#78122B]/20">Women</span> and <span className="font-medium text-[#2E6B38] border-b border-[#2E6B38]/20">Children</span> worldwide.
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5C4D50] max-w-4xl mx-auto font-normal leading-[1.5] tracking-wide mt-8">
+              Structured, compassionate, and authentic online Islamic learning tailored for <span className="font-semibold text-[#78122B] border-b border-[#78122B]/20">Women</span> and <span className="font-semibold text-[#2E6B38] border-b border-[#2E6B38]/20">Children</span> worldwide.
             </p>
 
             {/* Refined Subject Highlights with Professional Styling */}
