@@ -346,17 +346,17 @@ export const Homepage: React.FC<HomepageProps> = ({
       
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center justify-center pt-20 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Professional Background Layer with Enhanced Transparency */}
+        {/* Enhanced Professional Background with Beautiful Image Presence */}
         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          {/* Subtle Animated Background Image Layer */}
+          {/* Enhanced Animated Background Image Layer */}
           <motion.div 
             className="absolute inset-0 w-full h-full"
             animate={{
-              scale: [1, 1.05, 1],
-              opacity: [0.15, 0.25, 0.15],
+              scale: [1, 1.08, 1],
+              opacity: [0.35, 0.45, 0.35],
             }}
             transition={{
-              duration: 30,
+              duration: 25,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -365,56 +365,56 @@ export const Homepage: React.FC<HomepageProps> = ({
               src={heroQuranSeerahBooks} 
               alt="Open Holy Quran on rehal stand surrounded by Tajweed, Seerah, and classical Islamic study books" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover filter brightness-[1.1] contrast-[0.85] saturate-[0.8] opacity-80"
+              className="w-full h-full object-cover filter brightness-[1.05] contrast-[1.1] saturate-[1.05]"
               style={{ 
-                filter: 'contrast(0.85) saturate(0.8) brightness(1.1)',
+                filter: 'contrast(1.1) saturate(1.05) brightness(1.05)',
                 imageRendering: 'high-quality'
               }}
               loading="eager"
               decoding="sync"
             />
             
-            {/* Professional overlay with subtle warmth */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/3 via-transparent to-[#F3D797]/3 mix-blend-soft-light" />
+            {/* Enhanced overlay with Islamic warmth */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#78122B]/8 via-transparent to-[#F3D797]/6 mix-blend-multiply" />
           </motion.div>
 
-          {/* Enhanced Professional Overlay for Maximum Readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/85 via-[#FAF8F5]/75 to-[#FAF8F5]/90" />
-          <div className="absolute inset-0 bg-white/60 backdrop-blur-[0.5px]" />
+          {/* Balanced Professional Overlay for Readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/70 via-[#FAF8F5]/60 to-[#FAF8F5]/75" />
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[0.3px]" />
 
-          {/* Subtle Professional Accent Elements */}
+          {/* Enhanced Professional Accent Elements */}
           <motion.div
-            className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gradient-to-br from-[#78122B]/8 via-[#78122B]/4 to-transparent blur-3xl"
+            className="absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-gradient-to-br from-[#78122B]/12 via-[#78122B]/6 to-transparent blur-3xl"
             animate={{
-              x: [0, 20, -10, 0],
-              y: [0, 15, -5, 0],
-              scale: [1, 1.1, 1.05, 1],
-              opacity: [0.2, 0.4, 0.3, 0.2],
+              x: [0, 30, -15, 0],
+              y: [0, 20, -8, 0],
+              scale: [1, 1.2, 1.1, 1],
+              opacity: [0.3, 0.5, 0.4, 0.3],
             }}
             transition={{
-              duration: 18,
+              duration: 20,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           />
 
           <motion.div
-            className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-tl from-[#D4AF37]/8 via-[#F3D797]/6 to-transparent blur-3xl"
+            className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] rounded-full bg-gradient-to-tl from-[#D4AF37]/12 via-[#F3D797]/8 to-transparent blur-3xl"
             animate={{
-              x: [0, -25, 10, 0],
-              y: [0, -20, 5, 0],
-              scale: [1, 1.15, 0.98, 1],
-              opacity: [0.15, 0.35, 0.2, 0.15],
+              x: [0, -35, 15, 0],
+              y: [0, -25, 8, 0],
+              scale: [1, 1.25, 1.05, 1],
+              opacity: [0.25, 0.45, 0.3, 0.25],
             }}
             transition={{
-              duration: 22,
+              duration: 24,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           />
 
-          {/* Clean Professional Grid Pattern */}
-          <div className="absolute inset-0 bg-[radial-gradient(#78122B_0.5px,transparent_0.5px)] [background-size:40px_40px] opacity-[0.02]" />
+          {/* Refined Islamic Pattern Grid */}
+          <div className="absolute inset-0 bg-[radial-gradient(#78122B_0.8px,transparent_0.8px)] [background-size:48px_48px] opacity-[0.04]" />
         </div>
 
         {/* Hero Content Container - Enhanced Professional Layout */}
