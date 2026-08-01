@@ -403,8 +403,9 @@ export const Homepage: React.FC<HomepageProps> = ({
             transition={{ duration: 0.8 }}
             className="space-y-4 pt-4"
           >
-            <h1 className="serif-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#23181A] leading-[1.12] tracking-tight">
-              Knowledge That Reaches the Heart. <br className="hidden sm:inline" />
+            <h1 className="serif-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#23181A] leading-[1.15] tracking-tight">
+              Knowledge That Reaches the Heart.
+              <br />
               <span className="text-[#78122B] italic">Amal That Changes the Life.</span>
             </h1>
 
