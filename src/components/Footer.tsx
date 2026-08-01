@@ -208,26 +208,39 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, currentRoute }) => {
         </div>
 
         {/* Closing Row */}
-        <div className="mt-16 pt-8 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/80">
-          <div className="flex items-center space-x-1.5">
-            <Compass className="w-4 h-4 text-[#F3D797]" />
-            <span>Serving Seekers Globally &bull; Conducted over Google Meet</span>
+        <div className="mt-16 pt-8 border-t border-white/20 space-y-4">
+          {/* Copyright Notice */}
+          <div className="text-center">
+            <p className="text-sm font-semibold text-white mb-2">
+              © 2025 Qalbiya Islamic Institute. All Rights Reserved.
+            </p>
+            <p className="text-xs text-white/70 italic">
+              "And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose." - Quran 65:3
+            </p>
           </div>
-          <div className="flex items-center space-x-4 flex-wrap justify-center sm:justify-end gap-y-2">
-            <div className="flex items-center space-x-1">
-              <span>Made with deep respect &bull; Focus on the heart</span>
-              <Heart className="w-3.5 h-3.5 text-[#F3D797] inline fill-[#F3D797] animate-pulse" />
+          
+          {/* Footer Links Row */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/80">
+            <div className="flex items-center space-x-1.5">
+              <Compass className="w-4 h-4 text-[#F3D797]" />
+              <span>Serving Seekers Globally &bull; Conducted over Google Meet</span>
             </div>
-            <span className="hidden sm:inline text-white/30">&bull;</span>
-            <a 
-              href="https://www.instagram.com/byte._bros?igsh=MWs1a3hxNWl2Znl4aQ==" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#F3D797] hover:text-white font-bold transition-colors duration-300 underline decoration-[#F3D797]/50 hover:decoration-current cursor-pointer"
-              id="developer-link-regular"
-            >
-              Developed by ByteBrothers
-            </a>
+            <div className="flex items-center space-x-4 flex-wrap justify-center sm:justify-end gap-y-2">
+              <div className="flex items-center space-x-1">
+                <span>Made with deep respect &bull; Focus on the heart</span>
+                <Heart className="w-3.5 h-3.5 text-[#F3D797] inline fill-[#F3D797] animate-pulse" />
+              </div>
+              <span className="hidden sm:inline text-white/30">&bull;</span>
+              <a 
+                href="https://www.instagram.com/byte._bros?igsh=MWs1a3hxNWl2Znl4aQ==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#F3D797] hover:text-white font-bold transition-colors duration-300 underline decoration-[#F3D797]/50 hover:decoration-current cursor-pointer"
+                id="developer-link-regular"
+              >
+                Developed by ByteBrothers
+              </a>
+            </div>
           </div>
         </div>
       </div>
