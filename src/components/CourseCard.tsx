@@ -106,6 +106,10 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelect }) => {
           >
             {course.title}
           </h3>
+          <div className="flex items-center gap-1.5 w-fit rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Live Online</span>
+          </div>
           <p className="text-sm italic font-medium text-[#5C4D50] line-clamp-2">
             "{course.hook}"
           </p>
